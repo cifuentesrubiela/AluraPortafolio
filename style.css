@@ -1,0 +1,514 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root {
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+    --cor-de-fundo: #11162a;
+    --cor-de-link: #000;
+    --color-principal: #63a0bd;
+    --color-secundario: #3c1cb4;
+    --color-texto: #72768a;
+    --color-texto-2: #9aa0ed;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo);
+    font-family: "Raleway";
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #fff;
+}
+ol,
+ul,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+.boton {
+    font-size: 32px;
+    padding: 16px 64px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(
+        90deg,
+        var(--color-principal),
+        var(--color-secundario)
+    );
+    color: #fff;
+    font-family: "Cabin";
+    cursor: pointer;
+}
+
+.boton:hover {
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+h2 {
+    font-family: "Cabin";
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: "Cabin";
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: "Cabin";
+    font-size: 1.5rem;
+    color: var(--color-texto);
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sección Menu*/
+.menu {
+    padding: 40px 10rem;
+}
+
+.menu__logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.navegacion {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.menu__list__item {
+    margin-left: 20px;
+    font-family: "Cabin";
+    text-transform: uppercase;
+}
+
+.menu__list__item:first-child {
+    margin-left: 0;
+}
+
+.menu__list__item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.menu__list__item a:hover {
+    color: var(--color-principal);
+}
+
+.menu__list__item-contact {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+.title {
+    height: calc(100vh - 136px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 10rem;
+}
+
+.title__bio {
+    font-family: "Playfair Display SC";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+.title__bio-punto {
+    color: var(--color-principal);
+    font-size: 150px;
+    line-height: 0;
+}
+
+.title__subtitulo {
+    font-size: 48px;
+    font-family: "Cabin";
+    font-weight: normal;
+    color: var(--color-texto);
+}
+
+.title__network {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title__network__item img {
+    width: 40px;
+}
+
+/*Sección About*/
+
+section.about {
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+    margin: 0 10rem 200px 10rem;
+}
+
+.about__contenedor-foto {
+    height: 484px;
+    width: 444.8px;
+    min-width: 444.8px;
+    position: relative;
+}
+
+.about__foto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.about__borde-foto {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    border: 15px solid var(--color-principal);
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+.about__container {
+    width: 800px;
+}
+
+.about__paragraph {
+    font-family: "Cabin";
+    font-size: 24px;
+    color: var(--color-texto);
+    line-height: 1.2;
+}
+.about__contratame {
+    margin-right: 1.5rem;
+    text-transform: uppercase;
+}
+.about__hoja-de-vida {
+    text-transform: uppercase;
+    background: var(--cor-de-fundo);
+    border: 2px solid var(--color-secundario);
+}
+.portafolio__titulo {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.portafolio__enlaces-proyectos {
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+.portafolio__link-proyecto {
+    color: #fff;
+    font-family: "Cabin";
+    font-size: 24px;
+}
+.portafolio__link-proyecto:hover {
+    color: var(--color-principal);
+}
+.portafolio__contenedor-foto {
+    height: 293.4px;
+    width: 575.1px;
+    min-width: 575.1px;
+}
+.skills {
+    text-align: center;
+    margin-bottom: 12.5rem;
+}
+.skills__line {
+    display: flex;
+    justify-content: space-evenly;
+}
+.skills__img {
+    margin-bottom: 1.5rem;
+}
+
+.skills__icono {
+    height: 100px;
+    width: 100px;
+}
+.skills__name {
+    font-family: "Cabin";
+    font-size: 24px;
+}
+
+/*Sección Hobbies*/
+
+section.hobbies {
+    margin-bottom: 12.5rem;
+}
+
+.hobbies__title {
+    text-align: center;
+}
+
+.hobbies__line {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hobbies__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hobbies__imagen {
+    width: 100px;
+}
+
+.hobbies__name {
+    font-family: "Cabin";
+    font-size: 24px;
+}
+
+/* Experiencia Académica*/
+
+section.academic {
+    margin-bottom: 12.5rem;
+}
+
+.academic__title {
+    text-align: center;
+}
+
+.academic__courses {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.academic__courses__box {
+    position: relative;
+    background: var(--cor-de-fundo);
+    background-clip: padding-box;
+    border: solid 5px transparent;
+    border-radius: 10px;
+    box-shadow: -5px -5px 50px -20px var(--color-secundario),
+        5px 5px 50px -20px var(--color-principal);
+    padding: 2rem;
+}
+
+.academic__courses__box::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    background: linear-gradient(
+        to right bottom,
+        var(--color-secundario),
+        var(--color-principal)
+    );
+}
+
+.academic__courses__imagen {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.academic__courses__subtitulo {
+    font-size: 1.25rem;
+    color: var(--color-texto);
+}
+
+/* experiencia*/
+
+section.experience {
+}
+
+/*Contacto*/
+
+section.formcontato {
+    background: linear-gradient(
+        to right,
+        var(--color-secundario),
+        var(--color-principal)
+    );
+    border-radius: 100px 100px 0 0;
+    padding: 30px 10rem 50px 10rem;
+}
+
+.formcontato__title {
+    text-align: center;
+    margin-top: 0;
+}
+
+.formcontato__contacto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formcontato__texto {
+    color: var(--color-texto-2);
+    font-size: 1rem;
+    width: 350px;
+    line-height: normal;
+}
+
+.contacto__contenedor-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contacto__dato {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contacto__contenedor-icono-dato {
+    background: linear-gradient(
+        to right bottom,
+        var(--color-principal),
+        var(--color-secundario)
+    );
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.contacto__icono-dato {
+    width: 32px;
+}
+
+.contacto__descripcion-dato {
+    color: #fff;
+    font-size: 1.125rem;
+}
+
+.contacto__formulario {
+    background: linear-gradient(
+        to right bottom,
+        var(--color-principal),
+        var(--color-secundario)
+    );
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.contacto__contenedor-campos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.contacto__input,
+.contacto__textarea {
+    background-color: var(--cor-de-fundo);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+}
+
+.contacto__input::placeholder {
+    color: var(--color-texto);
+    font-family: "Cabin";
+}
+
+.contacto__textarea::placeholder {
+    color: var(--color-texto);
+    font-family: "Cabin";
+}
+
+.contacto__boton {
+    background-color: var(--cor-de-fundo);
+    color: #fff;
+    border: none;
+}
+
+/*footeer*/
+
+section.footer {
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+/*Tablet*/
+@media (min-width: 768px) {
+    /* Menú */
+
+    /*title*/
+
+    /*Skills*/
+
+    /*Hobbies*/
+
+    /*Formación Académica*/
+
+    /*Experiencia Profesional*/
+}
+
+/*Mobile*/
+@media (min-width: 425px) {
+    /*Menu*/
+
+    /*Titulo*/
+
+    /*Sección sobre mi*/
+
+    /*Skills*/
+
+    /*Hobbies*/
+
+    /*Formación Académica*/
+
+    /*Experiencia Profesional*/
+
+    /*Contacto*/
+
+    /*Footer*/
+}
